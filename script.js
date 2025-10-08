@@ -611,22 +611,14 @@ function initCarousel() {
     
     const dots = dotsContainer.querySelectorAll('.carousel-dot');
     
-    // Add click event listeners to images
+    // Add click event listeners to Learn More buttons
     slides.forEach((slide, index) => {
-        const img = slide.querySelector('.vision-img');
-        if (img) {
-            img.addEventListener('click', () => {
+        const ctaBtn = slide.querySelector('.mood-cta');
+        if (ctaBtn) {
+            ctaBtn.addEventListener('click', (e) => {
+                e.preventDefault();
                 showProjectInfo(index);
-                stopAutoSlide(); // Pause the auto-slide when a card is clicked
-            });
-            img.style.cursor = 'pointer';
-            img.addEventListener('mouseenter', () => {
-                img.style.transform = 'scale(1.05)';
-                img.style.filter = 'brightness(1.1)';
-            });
-            img.addEventListener('mouseleave', () => {
-                img.style.transform = 'scale(1)';
-                img.style.filter = 'brightness(1)';
+                stopAutoSlide(); // Pause the auto-slide when a button is clicked
             });
         }
     });
