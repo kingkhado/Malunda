@@ -1848,14 +1848,24 @@ section {
         gap: 1rem;
     }
     
+    .carousel-container {
+        padding: 1rem 0.5rem;
+    }
+    
+    .carousel-track {
+        gap: 0;
+    }
+    
     .carousel-slide {
-        min-width: calc(100% - 2rem);
-        max-width: calc(100% - 2rem);
+        min-width: 100%;
+        max-width: 100%;
+        padding: 0 0.5rem;
     }
     
     .mood-card {
         height: 350px;
         width: 100%;
+        margin: 0 auto;
     }
     
     .mood-cta {
@@ -1866,6 +1876,11 @@ section {
     .vision-description {
         font-size: 1rem;
         padding: 0 1rem;
+        color: white !important;
+    }
+    
+    .moodboard .section-subtitle {
+        color: white !important;
     }
     
     /* Vision Comparison */
@@ -2011,13 +2026,19 @@ section {
     
     /* Carousel */
     .carousel-slide {
-        min-width: calc(100% - 2rem);
-        max-width: calc(100% - 2rem);
+        min-width: 100%;
+        max-width: 100%;
+        padding: 0 0.5rem;
     }
     
     .mood-card {
         height: 300px;
         width: 100%;
+        margin: 0 auto;
+    }
+    
+    .vision-description {
+        color: white !important;
     }
     
     .mood-cta {
@@ -2218,13 +2239,15 @@ section {
     }
     
     .carousel-slide {
-        min-width: calc(100% - 2rem);
-        max-width: calc(100% - 2rem);
+        min-width: 100%;
+        max-width: 100%;
+        padding: 0 0.5rem;
     }
     
     .mood-card {
         height: 280px;
         width: 100%;
+        margin: 0 auto;
     }
     
     .section-title {

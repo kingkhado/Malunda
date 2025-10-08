@@ -567,10 +567,10 @@ function initCarousel() {
     // Dynamic slide width calculation based on screen size
     function getSlideWidth() {
         const screenWidth = window.innerWidth;
-        if (screenWidth <= 480) {
-            return 270; // 250px + 20px gap for mobile
-        } else if (screenWidth <= 768) {
-            return 300; // 280px + 20px gap for tablet
+        if (screenWidth <= 768) {
+            // On mobile/tablet, use full container width
+            const container = document.querySelector('.carousel-container');
+            return container ? container.offsetWidth : screenWidth;
         } else {
             return 320; // 300px + 20px gap for desktop
         }
