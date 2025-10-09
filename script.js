@@ -567,9 +567,9 @@ function initCarousel() {
             type: "Home Remodelling"
         },
         {
-            title: "Theme Parks",
+            title: "Indoor Theme Parks",
             description: "Vibrant, interactive environments that bring out the child in everyone",
-            type: "Theme Park Structures"
+            type: "Indoor Theme Park Structures"
         },
         {
             title: "Galaxy Ceilings",
