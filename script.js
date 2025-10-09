@@ -328,47 +328,23 @@ function initScrollToTop() {
     }
 }
 
-// Contact Form Functionality
+// Contact Form Functionality - Using Formspree
 function initContactForm() {
-    const contactForm = document.getElementById('contactForm');
+    const contactForm = document.querySelector('.contact-form');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(contactForm);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const service = formData.get('service');
-            const message = formData.get('message');
-            
-            if (!name || !email || !message) {
-                showNotification('Please fill in all required fields.', 'error');
-                return;
-            }
-            
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                showNotification('Please enter a valid email address.', 'error');
-                return;
-            }
-            
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
             
+            // Formspree will handle the actual submission
+            // Re-enable button after a delay in case of errors
             setTimeout(() => {
-                const subject = `Contact Form Submission - ${service || 'General Inquiry'}`;
-                const body = `Name: ${name}\nEmail: ${email}\nService Interest: ${service || 'Not specified'}\n\nMessage:\n${message}`;
-                const mailtoLink = `mailto:info@malundagroup.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                
-                window.location.href = mailtoLink;
-                contactForm.reset();
-                showNotification('Thank you for your message! Your email client will open to send the message.', 'success');
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-            }, 1500);
+            }, 3000);
         });
     }
 }
@@ -578,8 +554,18 @@ function initCarousel() {
     
     let currentIndex = 0;
     
-    // Project information for each image - updated to match user requirements
+    // Project information for each image - reordered to match new carousel
     const projectInfo = [
+        {
+            title: "African Art Murals",
+            description: "Celebrating our heritage through bold, contemporary African-inspired art",
+            type: "Creative Space"
+        },
+        {
+            title: "Playful Geometry",
+            description: "Bring your home to life with bold shapes and vibrant lights",
+            type: "Home Remodelling"
+        },
         {
             title: "Theme Parks",
             description: "Vibrant, interactive environments that bring out the child in everyone",
@@ -596,29 +582,9 @@ function initCarousel() {
             type: "Creative Renovation"
         },
         {
-            title: "African Art Murals",
-            description: "Celebrating our heritage through bold, contemporary African-inspired art",
-            type: "Creative Space"
-        },
-        {
             title: "Dynamic Therapy Buildings",
             description: "Artistic luxury spaces designed for healing and therapeutic experiences",
             type: "Artistic Luxury"
-        },
-        {
-            title: "Playful Geometry",
-            description: "Bring your home to life with bold shapes and unexpected angles",
-            type: "Home Remodelling"
-        },
-        {
-            title: "Creative Architecture",
-            description: "Innovative building concepts that challenge conventional design",
-            type: "Creative Space"
-        },
-        {
-            title: "Healing Spaces",
-            description: "Spaces focused on inner child therapy and wellness",
-            type: "Healing Space"
         }
     ];
     
