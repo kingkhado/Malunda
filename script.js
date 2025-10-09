@@ -1,4 +1,4 @@
-// Enhanced Interactive JavaScript for Malunda Website
+ // Enhanced Interactive JavaScript for Malunda Website
 
 // DOM Elements
 const navbar = document.querySelector('.navbar');
@@ -581,19 +581,19 @@ function initCarousel() {
     // Project information for each image - updated to match user requirements
     const projectInfo = [
         {
-            title: "Colorful Play Spaces",
+            title: "Theme Parks",
             description: "Vibrant, interactive environments that bring out the child in everyone",
-            type: "Residential"
+            type: "Theme Park Structures"
         },
         {
             title: "Galaxy Ceilings",
-            description: "Starlit spaces that inspire wonder and dreams of infinite possibilities",
-            type: "Commercial"
+            description: "Immersive building experiences with starlit spaces that inspire wonder",
+            type: "Commercial - Immersive Building"
         },
         {
             title: "Nature Integration",
-            description: "Bringing the outdoors in with living walls and organic shapes",
-            type: "Renovation"
+            description: "Bringing the outdoors in with living walls and organic natural elements",
+            type: "Creative Renovation"
         },
         {
             title: "African Art Murals",
@@ -601,14 +601,24 @@ function initCarousel() {
             type: "Creative Space"
         },
         {
+            title: "Dynamic Therapy Buildings",
+            description: "Artistic luxury spaces designed for healing and therapeutic experiences",
+            type: "Artistic Luxury"
+        },
+        {
             title: "Playful Geometry",
-            description: "Bold shapes and unexpected angles that challenge conventional design",
+            description: "Bring your home to life with bold shapes and unexpected angles",
             type: "Home Remodelling"
         },
         {
-            title: "Interactive Elements",
-            description: "Spaces that respond to touch, movement, and imagination",
+            title: "Creative Architecture",
+            description: "Innovative building concepts that challenge conventional design",
             type: "Creative Space"
+        },
+        {
+            title: "Healing Spaces",
+            description: "Spaces focused on inner child therapy and wellness",
+            type: "Healing Space"
         }
     ];
     
@@ -797,7 +807,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.opacity = '1';
     }, 100);
     
-    console.log('🚀 Malunda website loaded with enhanced interactivity and healing animations!');
+    console.log('🚀 Malunda website loaded with enhanced interactivity, healing animations, and optimized image loading!');
 });
 
 // Performance optimization: Throttle scroll events

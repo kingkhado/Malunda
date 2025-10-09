@@ -49,6 +49,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
+    <!-- Preload Critical Images for Faster Loading -->
+    <link rel="preload" as="image" href="malunda logo.png" type="image/png">
+    <link rel="preload" as="image" href="images/IMG_6351.JPG" type="image/jpeg" media="(min-width: 768px)">
+    <link rel="preload" as="image" href="images/IMG_6351.JPG" type="image/jpeg" media="(max-width: 767px)" imagesrcset="images/IMG_6351.JPG 800w">
+    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@700&family=Montserrat:wght@700&family=Lobster&family=Raleway:wght@800&family=Dancing+Script:wght@700&family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -146,7 +151,7 @@
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="malunda logo.png" alt="Malunda Construction Group Logo" style="height: 40px; width: auto; margin-right: 10px; vertical-align: middle;">
+                <img src="malunda logo.png" alt="Malunda Construction Group Logo" width="40" height="40" style="height: 40px; width: auto; margin-right: 10px; vertical-align: middle;" loading="eager" decoding="sync">
                 <span class="logo-text" aria-label="Malunda Construction Group">MALUNDA</span>
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
@@ -201,7 +206,7 @@
                 <div class="chat-bubble left" role="article" aria-label="Message from Dad">
                     <div class="chat-avatar">
                         <a href="https://andaglobal.co.za" target="_blank" rel="noopener" aria-label="Visit Anda Global Construction website">
-                            <img src="images/Anda global logo.png" alt="Anda Global Construction CEO profile picture" style="width: 50px; height: 50px; border-radius: 50%;">
+                            <img src="images/Anda global logo.png" alt="Anda Global Construction CEO profile picture" width="50" height="50" style="width: 50px; height: 50px; border-radius: 50%;" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="chat-content">
@@ -219,7 +224,7 @@
                     </div>
                     <div class="chat-avatar">
                         <a href="https://mkhashane.com" target="_blank" rel="noopener" aria-label="Visit MK Hashane website">
-                            <img src="images/agapee whats app logo.jpg" alt="Digital Artist and Tech Geek profile picture" style="width: 50px; height: 50px; border-radius: 50%;">
+                            <img src="images/agapee whats app logo.jpg" alt="Digital Artist and Tech Geek profile picture" width="50" height="50" style="width: 50px; height: 50px; border-radius: 50%;" loading="lazy" decoding="async">
                         </a>
                     </div>
                 </div>
@@ -227,7 +232,7 @@
                 <div class="chat-bubble left" role="article" aria-label="Message from Dad">
                     <div class="chat-avatar">
                         <a href="https://andaglobal.co.za" target="_blank" rel="noopener" aria-label="Visit Anda Global Construction website">
-                            <img src="images/Anda global logo.png" alt="Anda Global Construction CEO profile picture" style="width: 50px; height: 50px; border-radius: 50%;">
+                            <img src="images/Anda global logo.png" alt="Anda Global Construction CEO profile picture" width="50" height="50" style="width: 50px; height: 50px; border-radius: 50%;" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="chat-content">
@@ -245,7 +250,7 @@
                     </div>
                     <div class="chat-avatar">
                         <a href="https://mkhashane.com" target="_blank" rel="noopener" aria-label="Visit MK Hashane website">
-                            <img src="images/agapee whats app logo.jpg" alt="Digital Artist and Tech Geek profile picture" style="width: 50px; height: 50px; border-radius: 50%;">
+                            <img src="images/agapee whats app logo.jpg" alt="Digital Artist and Tech Geek profile picture" width="50" height="50" style="width: 50px; height: 50px; border-radius: 50%;" loading="lazy" decoding="async">
                         </a>
                     </div>
                 </div>
@@ -253,7 +258,7 @@
                 <div class="chat-bubble left" role="article" aria-label="Message from Dad">
                     <div class="chat-avatar">
                         <a href="https://andaglobal.co.za" target="_blank" rel="noopener" aria-label="Visit Anda Global Construction website">
-                            <img src="images/Anda global logo.png" alt="Anda Global Construction CEO profile picture" style="width: 50px; height: 50px; border-radius: 50%;">
+                            <img src="images/Anda global logo.png" alt="Anda Global Construction CEO profile picture" width="50" height="50" style="width: 50px; height: 50px; border-radius: 50%;" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="chat-content">
@@ -278,55 +283,53 @@
                 <div class="carousel-track" id="carouselTrack" role="group" aria-label="Carousel images">
                     <div class="carousel-slide" role="group" aria-label="Slide 1 of 8">
                         <div class="mood-card">
-                            <img src="images/IMG_6351.JPG" alt="Colorful play spaces with vibrant interactive environments" class="vision-img" loading="lazy" decoding="async" role="img" tabindex="0">
+                            <img src="images/IMG_6351.JPG" alt="Colorful play spaces with vibrant interactive environments" class="vision-img" loading="eager" decoding="async" role="img" tabindex="0" width="300" height="400">
                             <button class="btn btn-primary mood-cta" role="button" aria-label="Learn more about theme park structures">Learn More</button>
                         </div>
                     </div>
 
                     <div class="carousel-slide" role="group" aria-label="Slide 2 of 8">
                         <div class="mood-card">
-                            <img src="images/IMG_6359.JPG" alt="Galaxy ceilings with starlit spaces that inspire wonder" class="vision-img" loading="lazy" decoding="async" role="img" tabindex="0">
-                            <button class="btn btn-primary mood-cta" role="button" aria-label="Learn more about starlit healing spaces">Learn More</button>
+                            <img src="images/IMG_6359.JPG" alt="Galaxy ceilings - immersive building experiences" class="vision-img" loading="lazy" decoding="async" role="img" tabindex="0" width="300" height="400">
+                            <button class="btn btn-primary mood-cta" role="button" aria-label="Learn more about immersive building experiences">Learn More</button>
                         </div>
                     </div>
 
                     <div class="carousel-slide" role="group" aria-label="Slide 3 of 8">
                         <div class="mood-card">
-                            <img src="images/IMG_6370.JPG" alt="Nature integration bringing outdoors in with living walls" class="vision-img" loading="lazy" decoding="async" role="img" tabindex="0">
+                            <img src="images/IMG_6358.JPG" alt="Nature integration bringing outdoors in with living walls" class="vision-img" loading="lazy" decoding="async" role="img" tabindex="0" width="300" height="400">
                             <button class="btn btn-primary mood-cta" role="button" aria-label="Learn more about nature-integrated designs">Learn More</button>
                         </div>
                     </div>
 
                     <div class="carousel-slide" role="group" aria-label="Slide 4 of 8">
                         <div class="mood-card">
-                            <img src="images/IMG_6371.JPG" alt="African art murals celebrating heritage through contemporary design" class="vision-img" loading="lazy" decoding="async" role="img" tabindex="0">
+                            <img src="images/IMG_6371.JPG" alt="African art murals celebrating heritage through contemporary design" class="vision-img" loading="lazy" decoding="async" role="img" tabindex="0" width="300" height="400">
                             <button class="btn btn-primary mood-cta" role="button" aria-label="Learn more about cultural heritage designs">Learn More</button>
                         </div>
                     </div>
 
                     <div class="carousel-slide" role="group" aria-label="Slide 5 of 8">
                         <div class="mood-card">
-                            <img src="images/IMG_6374.JPG" alt="Playful geometry with bold shapes and unexpected angles" class="vision-img" loading="lazy" decoding="async" role="img" tabindex="0">
-                            <button class="btn btn-primary mood-cta" role="button" aria-label="Learn more about geometric architectural designs">Learn More</button>
+                            <img src="images/IMG_6370.JPG" alt="Dynamic therapy buildings and artistic luxury spaces" class="vision-img" loading="lazy" decoding="async" role="img" tabindex="0" width="300" height="400">
+                            <button class="btn btn-primary mood-cta" role="button" aria-label="Learn more about dynamic therapy buildings">Learn More</button>
                         </div>
                     </div>
 
                     <div class="carousel-slide" role="group" aria-label="Slide 6 of 8">
                         <div class="mood-card">
-                            <img src="images/IMG_6376.JPG" alt="Interactive elements that respond to touch and movement" class="vision-img" loading="lazy" decoding="async" role="img" tabindex="0">
-                            <button class="btn btn-primary mood-cta" role="button" aria-label="Learn more about interactive installations">Learn More</button>
+                            <img src="images/IMG_6374.JPG" alt="Playful geometry - bring your home to life" class="vision-img" loading="lazy" decoding="async" role="img" tabindex="0" width="300" height="400">
+                            <button class="btn btn-primary mood-cta" role="button" aria-label="Learn more about home remodeling">Learn More</button>
                         </div>
                     </div>
                     <div class="carousel-slide" role="group" aria-label="Slide 7 of 8">
                         <div class="mood-card">
-                            <img src="images/IMG_6369.JPG" alt="Creative architectural design showcasing innovative building concepts" class="vision-img" loading="lazy" decoding="async" role="img" tabindex="0">
-                            <button class="btn btn-primary mood-cta" role="button" aria-label="Learn more about innovative architectural concepts">Learn More</button>
+                            <img src="images/IMG_6369.JPG" alt="Creative architectural design showcasing innovative building concepts" class="vision-img" loading="lazy" decoding="async" role="img" tabindex="0" width="300" height="400">
                         </div>
                     </div>
                     <div class="carousel-slide" role="group" aria-label="Slide 8 of 8">
                         <div class="mood-card">
-                            <img src="images/IMG_6377.jpg" alt="Healing space design focused on inner child therapy and wellness" class="vision-img" loading="lazy" decoding="async" role="img" tabindex="0">
-                            <button class="btn btn-primary mood-cta" role="button" aria-label="Learn more about inner child healing spaces">Learn More</button>
+                            <img src="images/IMG_6377.jpg" alt="Healing space design focused on inner child therapy and wellness" class="vision-img" loading="lazy" decoding="async" role="img" tabindex="0" width="300" height="400">
                         </div>
                     </div>
                 </div>
